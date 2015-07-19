@@ -5,7 +5,8 @@ var binPath = phantomjs.path
  
 var childArgs = [
   path.join(__dirname, 'grab-page.js'),
-  'some other argument (passed to phantomjs script)'
+  'http://www.google.com'
+  
 ]
  
 childProcess.execFile(binPath, childArgs, function(err, stdout, stderr) {

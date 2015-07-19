@@ -1,8 +1,13 @@
-var page = require('webpage').create();
-page.open('http://example.com', function(status) {
-  console.log("Status: " + status);
-  if(status === "success") {
-    page.render('output/example.png');
-  }
-  phantom.exit();
-});
+var path = require('path')
+var childProcess = require('child_process')
+var phantomjs = require('phantomjs')
+var binPath = phantomjs.path
+ 
+var childArgs = [
+  path.join(__dirname, 'grab-page.js'),
+  'some other argument (passed to phantomjs script)'
+]
+ 
+childProcess.execFile(binPath, childArgs, function(err, stdout, stderr) {
+  // handle results 
+})

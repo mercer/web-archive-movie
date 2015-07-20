@@ -4,7 +4,8 @@
   "description": "Using web archive snapshots for a page, create a movie",
   "main": "app.js",
   "dependencies": {
-    "phantomjs": "^1.9.17"
+    "phantomjs": "^1.9.17",
+    "request": "^2.58.0"
   },
   "devDependencies": {},
   "scripts": {
